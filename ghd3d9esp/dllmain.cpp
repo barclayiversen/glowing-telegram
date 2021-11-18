@@ -18,7 +18,7 @@ void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
 
 	//Draw stuff
 	DrawText("BRO MAN DUDE WHITE CLAW 420 BRO", windowWidth / 2, windowHeight - 20, D3DCOLOR_ARGB(255,255,255,255));
-
+	
 	int menuOffX = windowWidth / 2;
 	int menuOffY = 50;
 	D3DCOLOR enabled = D3DCOLOR_ARGB(255, 0, 255, 0);
@@ -34,18 +34,24 @@ void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
 		DrawText("2D Box (F3)", menuOffX, menuOffY + 2 * 12, hack->settings.box2D ? enabled : disabled);
 		DrawText("Status Text (F4)", menuOffX, menuOffY + 3 * 12, hack->settings.statusText ? enabled : disabled);
 		//DrawText("2D Statusbars (F5)", menuOffX, menuOffY + 3 * 12, hack->settings.status2D ? enabled : disabled);
-		DrawText("Aimbot (F5", menuOffX, menuOffY + 4 * 12, hack->settings.aimbot ? enabled : disabled);
+		DrawText("Aimbot (F5)", menuOffX, menuOffY + 4 * 12, hack->settings.aimbot ? enabled : disabled);
 		DrawText("3D Box (F6)", menuOffX, menuOffY + 5 * 12, hack->settings.box3D ? enabled : disabled);
 		DrawText("Velocity ESP (F7)", menuOffX, menuOffY + 6 * 12, hack->settings.velEsp ? enabled : disabled);
 		DrawText("Headline ESP (F8)", menuOffX, menuOffY + 7 * 12, hack->settings.headlineEsp ? enabled : disabled);
-		DrawText("Recoil crosshair (F9)", menuOffX, menuOffY + 8 * 12, hack->settings.rcsCrosshair ? enabled : disabled);
+		//DrawText("Recoil crosshair (F9)", menuOffX, menuOffY + 8 * 12, hack->settings.rcsCrosshair ? enabled : disabled);
+		DrawText("DrawFOV (F9)", menuOffX, menuOffY + 8 * 12, hack->settings.DrawFOV ? enabled : disabled);
 		DrawText("HideMenu (INS)", menuOffX, menuOffY + 9 * 12, D3DCOLOR_ARGB(255, 255, 255, 255));
 
 	}
 
+	if (hack->settings.DrawFOV)
+	{
+		Circle(windowWidth / 2, windowHeight / 2, hack->settings.aimbotFOV, 28, 1, hack->color.crosshair);
+	}
+
 	uintptr_t client = (uintptr_t)GetModuleHandle("client.dll");
 	uintptr_t localPlayer = *(uintptr_t*)(client + hazedumper::signatures::dwLocalPlayer);
-
+	// Replace 32 with get max player call ?
 	for (int i = 1; i < 32; i++)
 	{
 		
@@ -54,7 +60,7 @@ void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
 			continue;
 
 		D3DCOLOR espColor, snaplineColor, velocityColor, headlineColor;
-
+		//local ent checks
 		if ((uintptr_t)localPlayer != *(uintptr_t*)hack->localEnt)
 		{
 			hack->GetLocalEnt();
@@ -64,7 +70,7 @@ void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
 		{
 			hack->GetLocalEnt();
 		}
-
+		
 		if (curEnt->iTeamNum == hack->localEnt->iTeamNum)
 		{
 			espColor = hack->color.team.esp;
@@ -80,6 +86,7 @@ void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
 			headlineColor = hack->color.enemy.headline;
 		}
 
+		
 		if (!hack->settings.showTeamates && (curEnt->iTeamNum == hack->localEnt->iTeamNum))
 			continue;
 
@@ -119,37 +126,33 @@ void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
 					DrawEspBox2D(entPos2D, entHead2D, 1, espColor);
 				}
 
-				//if (hack->settings.status2D)
-				//{
-				//	int height = ABS(entPos2D.y - entHead2D.y);
-				//	int dX = (entPos2D.x - entHead2D.x);
-
-//					float healthPerc = curEnt->iHealth / 100.f;
-//					float armorPerc = curEnt->ArmorValue / 100.f;
-
-	//				Vec2 botHealth, topHealth, botArmor, topArmor;
-		//			int healthHeight = height * healthPerc;
-			//		int armorHeight = height * armorPerc;
-
-				//	botHealth.y = botArmor.y = entPos2D.y;
-
-					//botHealth.x = entPos2D.x - (height / 4) - 2;
-					//botArmor.x = entPos2D.x + (height / 4) + 2;
-
-//					topHealth.y = entHead2D.y + height - healthHeight;
-//					topArmor.y = entHead2D.y + height - armorHeight;
-
-	//				topHealth.x = entPos2D.x - (height / 4) - 2 - (dX * healthPerc);
-		//			topArmor.x = entPos2D.x + (height / 4) + 2 - (dX * armorPerc);
-
-			//		DrawLine(botHealth, topHealth, 2, hack->color.health);
-				//	DrawLine(botArmor, topArmor, 2, hack->color.armor);
-				//}
-
-				if (hack->settings.aimbot)
+				if (hack->settings.status2D)
 				{
-					hack->RunAimbot();
+					int height = ABS(entPos2D.y - entHead2D.y);
+					int dX = (entPos2D.x - entHead2D.x);
+
+					float healthPerc = curEnt->iHealth / 100.f;
+					float armorPerc = curEnt->ArmorValue / 100.f;
+
+					Vec2 botHealth, topHealth, botArmor, topArmor;
+					int healthHeight = height * healthPerc;
+					int armorHeight = height * armorPerc;
+
+					botHealth.y = botArmor.y = entPos2D.y;
+
+					botHealth.x = entPos2D.x - (height / 4) - 2;
+					botArmor.x = entPos2D.x + (height / 4) + 2;
+
+					topHealth.y = entHead2D.y + height - healthHeight;
+					topArmor.y = entHead2D.y + height - armorHeight;
+
+					topHealth.x = entPos2D.x - (height / 4) - 2 - (dX * healthPerc);
+					topArmor.x = entPos2D.x + (height / 4) + 2 - (dX * armorPerc);
+
+					DrawLine(botHealth, topHealth, 2, hack->color.health);
+					DrawLine(botArmor, topArmor, 2, hack->color.armor);
 				}
+
 
 				if (hack->settings.headlineEsp)
 				{
@@ -186,13 +189,16 @@ void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
 						DrawText("EZ HS", entPos2D.x, entPos2D.y + 24, D3DCOLOR_ARGB(255, 255, 255, 255));
 				}
 			}
-		}
-		//}
-			
+		}	
 	}
-	//ugly crosshair
-	//DrawFilledRect(windowWidth / 2 - 2, windowHeight / 2 - 2, 4, 4, D3DCOLOR_ARGB(255, 255, 255, 255));
 
+	if (hack->settings.aimbot)
+	{
+		if (GetAsyncKeyState(VK_RBUTTON))
+		{
+			hack->RunAimbot();
+		}
+	}
 	//Recoil crosshair
 	if (hack->settings.rcsCrosshair)
 	{
@@ -222,8 +228,6 @@ DWORD WINAPI HackThread(HMODULE hModule) {
 	}
 	hack = new Hack();
 	hack->Init();
-	//AllocConsole();
-	//freopen("CONOUT$", "W", stdout);
 
 	//Hack loop
 	while (!GetAsyncKeyState(VK_END))
@@ -253,11 +257,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpr) {
 	if (reason == DLL_PROCESS_ATTACH)
 		CloseHandle(CreateThread(0, 0, (LPTHREAD_START_ROUTINE)HackThread, hModule, 0, 0));
 
-
-	//AllocConsole();
-	//SetConsoleTitleA("d7420007585");
-	//freopen("CONOUT$", "w", stdout);
-	//std::cout << "This works" << std::endl;
 	return true;
 }
 

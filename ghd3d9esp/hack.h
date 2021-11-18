@@ -8,6 +8,8 @@
 #define TORAD(x) ((x) * 0.01745329252)
 #define W2S(x,y) hack->WorldToScreen(x, y)
 
+
+
 struct Vec2 {
 	float x, y;
 };
@@ -158,6 +160,7 @@ public:
 	Vec3 GetBonePos(Ent* ent, int bone);
 	Vec3 TransformVec(Vec3 src, Vec3 ang, float d);
 	Player* GetClosestEnemy();
+	Player* GetBestTarget(Ent* localPlayer, EntList* entList);
 
 	struct Settings {
 		bool showMenu = false;
@@ -165,12 +168,14 @@ public:
 		bool snapLines = false;
 		bool box2D = false;
 		bool statusText = false;
-		//bool status2D = false;
+		bool status2D = false;
 		bool aimbot = false;
 		bool box3D = false;
 		bool velEsp = false;
 		bool headlineEsp = false;
 		bool rcsCrosshair = true;
+		float aimbotFOV = 75;
+		bool DrawFOV = false;
 	}settings;
 
 	struct buttons {
@@ -184,7 +189,8 @@ public:
 		DWORD box3DBtn =		 VK_F6;
 		DWORD velEspBtn =		 VK_F7;
 		DWORD headlineEspBtn =  VK_F8;
-		DWORD rcsCrosshairBtn = VK_F9;
+		//DWORD rcsCrosshairBtn = VK_F9;
+		DWORD drawFOVbtn = VK_F9;
 	}button;
 
 	struct Colors {

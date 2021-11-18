@@ -84,8 +84,11 @@ void Hack::CheckButtons() {
 	if (GetAsyncKeyState(button.headlineEspBtn) & 1)
 		settings.headlineEsp = !settings.headlineEsp;
 
-	if (GetAsyncKeyState(button.rcsCrosshairBtn) & 1)
-		settings.rcsCrosshair = !settings.rcsCrosshair;
+	//if (GetAsyncKeyState(button.rcsCrosshairBtn) & 1)
+		//settings.rcsCrosshair = !settings.rcsCrosshair;
+
+	if (GetAsyncKeyState(button.drawFOVbtn) & 1)
+		settings.DrawFOV = !settings.DrawFOV;
 }
 
 bool Hack::CheckValidEnt(Ent* ent) {
@@ -189,6 +192,84 @@ Player* Hack::GetClosestEnemy()
 		return NULL;
 	}
 	return Player::GetPlayer(closestDistanceIndex);
+}
+
+Vec3 Subtract(Vec3 src, Vec3 dst)
+{
+	Vec3 diff;
+	diff.x = src.x - dst.x;
+	diff.y = src.y - dst.y;
+	diff.z = src.z - dst.z;
+	return diff;
+}
+
+float Magnitude(Vec3 vec)
+{
+	return sqrtf(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
+}
+
+float Distance(Vec3 src, Vec3 dst)
+{
+	Vec3 diff = Subtract(src, dst);
+	return Magnitude(diff);
+}
+
+Vec3 CalcAngle(Vec3 src, Vec3 dst)
+{
+	double PI = 3.14159265358979323846;
+	Vec3 angle;
+	angle.x = -atan2f(dst.x - src.x, dst.y - src.y) / PI * 180.0f + 180.0f;
+	angle.y = asinf((dst.z - src.z) / Distance(src, dst)) * 180.0f / PI;
+	angle.z = 0.0f;
+
+	return angle;
+}
+
+bool CheckValidEnt(Ent* ent) {
+	if (ent == nullptr)
+	{
+		return false;
+	}
+
+	if (ent == localEnt)
+	{
+		return false;
+	}
+
+	if (ent->iHealth <= 0)
+	{
+		return false;
+	}
+
+	if (ent->bDormant)
+	{
+		return false;
+	}
+	return true;
+}
+
+Player* Hack::GetBestTarget(Ent* localPlayer, EntList* entList)
+{
+	float oldDistance = FLT_MAX;
+	float newDistance = 0;
+	Ent* target = nullptr;
+	uintptr_t localPlayer = *(uintptr_t*)(client + hazedumper::signatures::dwLocalPlayer);
+	for (int i = 1; i < *Player::GetMaxPlayer(); i++)
+	{
+		Player* currentPlayer = Player::GetPlayer(i);
+
+		if (currentPlayer && currentPlayer != (Player*)LocalPlayer::Get() && (currentPlayer->GetHealth()) > 0)
+		{
+			Vec3 angleTo = CalcAngle(localPlayer->vecOrigin, *(Vec3)(currentPlayer->GetOrigin()));
+			newDistance = Distance(localPlayer->angles, angleTo);
+			if (newDistance < oldDistance)
+			{
+				oldDistance = newDistance;
+				target = ent;
+			}
+		}
+	}
+	return target;
 }
 
 void Hack::RunAimbot()

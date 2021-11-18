@@ -13,3 +13,7 @@ void DrawEspBox2D(Vec2 top, Vec2 bot, int thickness, D3DCOLOR color);
 void DrawEspBox3D(Vec3 top, Vec3 bot, float a, int width, int thickness, D3DCOLOR color);
 
 void DrawText(const char* text, float x, float y, D3DCOLOR color);
+
+void DrawCircle(float x, float y, float radius, float sides, int thickness, bool antialias, D3DCOLOR color);
+
+void Circle(int x, int y, int radius, int numSides, int thickness, D3DCOLOR color);

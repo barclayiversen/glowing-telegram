@@ -119,3 +119,42 @@ void DrawText(const char* text, float x, float y, D3DCOLOR color)
 	hack->FontF->DrawTextA(NULL, text, -1, &rect, DT_CENTER | DT_NOCLIP, color);
 
 }
+
+void DrawCircle(float x, float y, float radius, float sides, int thickness, bool antialias, D3DCOLOR color)
+{
+	#define M_PI 3.14159265358979323846
+	radius *= radius;
+	float Step = M_PI * 2.0 / sides;
+	int Count = 0;
+	for (float a = 0; a < M_PI * 2.0; a += Step)
+	{
+		float X1 = radius * cos(a) + x;
+		float Y1 = radius * sin(a) + y;
+		float X2 = radius * cos(a + Step) + x;
+		float Y2 = radius * sin(a + Step) + y;
+		DrawLine(X1, Y1, X2, Y2, thickness, color);
+		Count += 2;
+	}
+}
+
+void Circle(int X, int Y, int radius, int numSides, int thickness, D3DCOLOR color)
+{
+	#define PI 3.14159265358979323846
+	D3DXVECTOR2 Line[128];
+	float Step = PI * 2.0 / numSides;
+	int Count = 0;
+	for (float a = 0; a < PI * 2.0; a += Step)
+	{
+		float X1 = radius * cos(a) + X;
+		float Y1 = radius * sin(a) + Y;
+		float X2 = radius * cos(a + Step) + X;
+		float Y2 = radius * sin(a + Step) + Y;
+		Line[Count].x = X1;
+		Line[Count].y = Y1;
+		Line[Count + 1].x = X2;
+		Line[Count + 1].y = Y2;
+		DrawLine(X1, Y1, X2, Y2, thickness, color);
+		Count += 2;
+	}
+	
+}
