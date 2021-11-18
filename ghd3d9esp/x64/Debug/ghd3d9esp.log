@@ -1,0 +1,11 @@
+﻿  dllmain.cpp
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes\ghd3d9esp\dllmain.cpp(4,10): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  drawing.cpp
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes\ghd3d9esp\includes.h(5,10): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  dx.cpp
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes\ghd3d9esp\includes.h(5,10): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  hack.cpp
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes\ghd3d9esp\includes.h(5,10): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  hook.cpp
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes\ghd3d9esp\includes.h(5,10): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Generating Code...
