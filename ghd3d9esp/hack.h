@@ -8,8 +8,6 @@
 #define TORAD(x) ((x) * 0.01745329252)
 #define W2S(x,y) hack->WorldToScreen(x, y)
 
-
-
 struct Vec2 {
 	float x, y;
 };
@@ -28,34 +26,6 @@ struct Vec3 {
 
 struct Vec4 {
 	float x, y, z, w;
-};
-
-class Vector3
-{
-public:
-	float x;
-	float y;
-	float z;
-
-	Vector3()
-	{
-		x = y = z = 0;
-	}
-
-	Vector3(float x, float y, float z)
-	{
-		this->x = x;
-		this->y = y;
-		this->z = z;
-	}
-
-	Vector3& operator+(Vector3 arg)
-	{
-		x += arg.x;
-		y += arg.y;
-		z += arg.z;
-		return *this;
-	}
 };
 
 class Ent {
@@ -87,37 +57,6 @@ public:
 
 };
 
-class Player
-{
-private:
-	Player();
-
-public:
-	static int* GetMaxPlayer();
-	static Player* GetPlayer(int index);
-
-	int* GetHealth();
-	int* GetTeam();
-	Vector3* GetOrigin();
-	Vector3* GetViewOffset();
-	Vector3* GetBonePos(int boneID);
-};
-
-class LocalPlayer
-{
-private:
-	LocalPlayer();
-
-public:
-	static LocalPlayer* Get();
-
-	Vector3* GetOrigin();
-	Vector3* GetViewOffset();
-	int* GetHealth();
-	int* GetTeam();
-	void AimAt(Vector3* target);
-	float GetDistance(Vector3*);
-};
 
 class EntListObj {
 public:
@@ -150,7 +89,7 @@ public:
 
 	~Hack();
 
-	void RunAimbot();
+	
 	void Init();
 	void Update();
 	void GetLocalEnt();
@@ -159,8 +98,6 @@ public:
 	bool WorldToScreen(Vec3 pos, Vec2& screen);
 	Vec3 GetBonePos(Ent* ent, int bone);
 	Vec3 TransformVec(Vec3 src, Vec3 ang, float d);
-	Player* GetClosestEnemy();
-	Player* GetBestTarget(Ent* localPlayer, EntList* entList);
 
 	struct Settings {
 		bool showMenu = false;

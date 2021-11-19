@@ -1,42 +1,49 @@
 ﻿  aimbot.cpp
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(122,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(59): message : see declaration of 'Ent'
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\aimbot.cpp(53,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\aimbot.cpp(54,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(63,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(31): message : see declaration of 'Ent'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\aimbot.cpp(54,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\aimbot.cpp(55,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\aimbot.cpp(136,63): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\aimbot.cpp(137,66): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   dllmain.cpp
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(122,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(59): message : see declaration of 'Ent'
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(20,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(20,58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(29,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(29,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(32,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(32,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(33,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(33,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(34,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(34,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(35,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(35,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(37,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(37,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(63,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(31): message : see declaration of 'Ent'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(21,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(21,58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(30,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(30,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(33,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(33,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(34,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(34,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(35,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(35,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(36,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(36,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(38,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(38,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(39,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(39,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(39,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(39,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(40,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(40,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(42,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(42,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(43,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(43,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(108,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(108,32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(114,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(114,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(41,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(41,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(43,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(43,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(44,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(44,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(50,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(110,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(110,32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(116,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(116,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(132,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(133,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(139,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\dllmain.cpp(140,22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   drawing.cpp
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(122,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(59): message : see declaration of 'Ent'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(63,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(31): message : see declaration of 'Ent'
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\drawing.cpp(20,28): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\drawing.cpp(20,24): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\drawing.cpp(21,28): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
@@ -75,17 +82,17 @@ C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\drawing.cpp(156,
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\drawing.cpp(156,16): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\drawing.cpp(156,12): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   dx.cpp
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(122,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(59): message : see declaration of 'Ent'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(63,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(31): message : see declaration of 'Ent'
   hack.cpp
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(122,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(59): message : see declaration of 'Ent'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(63,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(31): message : see declaration of 'Ent'
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.cpp(154,27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.cpp(155,27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.cpp(156,27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   hook.cpp
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(122,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
-C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(59): message : see declaration of 'Ent'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(63,12): warning C4099: 'Ent': type name first seen using 'class' now seen using 'struct'
+C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hack.h(31): message : see declaration of 'Ent'
   Generating Code...
 C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\ghd3d9esp\hook.cpp(21): warning C4715: 'Hook': not all control paths return a value
   ghd3d9esp.vcxproj -> C:\Users\spracto\source\repos\ghd3d9esp3DBoxes - Copy\Debug\ghd3d9esp.dll

@@ -13,3 +13,4 @@
 #include "dx.h"
 #include "hook.h"
 #include "hack.h"
+#include "aimbot.h"

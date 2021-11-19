@@ -9,6 +9,7 @@ BYTE EndSceneBytes[7]{ 0 };
 tEndScene oEndScene = nullptr;
 extern LPDIRECT3DDEVICE9 pDevice = nullptr;
 Hack* hack;
+Aimbot* aimbot;
 
 //hook function
 void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
@@ -95,7 +96,7 @@ void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
 		Vec2 entPos2D, entHead2D;
 
 
-		//snapline
+		//If entity is visible
 		if (hack->WorldToScreen(curEnt->vecOrigin, entPos2D))
 		{
 			if (hack->settings.velEsp)
@@ -109,7 +110,7 @@ void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
 					DrawFilledRect(velOff2D.x - 2, velOff2D.y - 2, 4, 4, espColor);
 				}
 			}
-
+			//Snaplines
 			if (hack->settings.snapLines)
 			{
 				DrawLine(entPos2D.x, entPos2D.y, windowWidth / 2, windowHeight, 2, snaplineColor);
@@ -196,7 +197,7 @@ void APIENTRY hkEndScene(LPDIRECT3DDEVICE9 o_pDevice)
 	{
 		if (GetAsyncKeyState(VK_RBUTTON))
 		{
-			hack->RunAimbot();
+			aimbot->RunAimbot();
 		}
 	}
 	//Recoil crosshair
