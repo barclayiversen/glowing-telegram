@@ -225,15 +225,15 @@ Player* Aimbot::GetClosestEnemy()
 
 void Aimbot::RunAimbot()
 {
-	//Player* closestEnemy = GetClosestEnemy();
-	//if (closestEnemy)
-	//{
-	//	LocalPlayer::Get()->AimAt(closestEnemy->GetBonePos(8));
-	//}
-	Player* bestTarget = GetBestTarget();
+	Player* closestEnemy = GetClosestEnemy();
+	if (closestEnemy)
+	{
+		LocalPlayer::Get()->AimAt(closestEnemy->GetBonePos(8));
+	}
+	/*Player* bestTarget = GetBestTarget();
 	if (bestTarget)
 	{
 		LocalPlayer::Get()->AimAt(bestTarget->GetBonePos(8));
-	}
+	}*/
 }
 
